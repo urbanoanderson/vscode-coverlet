@@ -6,3 +6,4 @@ out/
 .vs/
 sample-coverlet-app/*/bin/
 sample-coverlet-app/*/obj/
+*.vsix
