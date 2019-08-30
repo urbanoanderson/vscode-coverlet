@@ -1,0 +1,37 @@
+{
+    "name": "vscode-coverlet",
+    "displayName": "Vscode Coverlet",
+    "description": "Coverlet tools for Vscode",
+    "version": "0.0.1",
+    "publisher": "urbanoanderson",
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.coverletStrip"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.coverletStrip",
+                "title": "Coverlet Strip"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "tslint ./src/*.ts",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^6.0.40",
+        "tslint": "^5.16.0",
+        "typescript": "^3.5.1",
+        "@types/vscode": "^1.32.0"
+    }
+}
