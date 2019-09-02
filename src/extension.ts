@@ -75,6 +75,11 @@ export function activate(context: vscode.ExtensionContext) {
 							if(removeBranchesElem){
 								delete methodElem[branchesElem]
 							}
+							else {
+								methodElem[branchesElem] = methodElem[branchesElem].filter(function (el: any) {
+									return el != null;
+								});
+							}
 
 							if(removeMethod){
 								delete report[dll][srcFile][className][classMethod]
