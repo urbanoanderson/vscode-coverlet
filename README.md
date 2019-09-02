@@ -1,3 +1,5 @@
+[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version-short/urbanoanderson.vscode-coverlet.svg)](https://marketplace.visualstudio.com/items?itemName=urbanoanderson.vscode-coverlet) [![Downloads](https://vsmarketplacebadge.apphb.com/downloads-short/urbanoanderson.vscode-coverlet.svg)](https://marketplace.visualstudio.com/items?itemName=urbanoanderson.vscode-coverlet)
+
 # Vscode-Coverlet
 
 ## About
@@ -27,3 +29,13 @@ Icon made by Freepik and available at `www.flaticon.com/free-icon/test_115050`
 - Click on `Start Debugging` in the Debug panel
 
 - A test instance of vscode loaded with the extension will appear
+
+## Release Notes
+
+### 1.0.1
+
+- Fix bug that leaves null values while removing some branches
+
+### 1.0.0
+
+- Initial Version
