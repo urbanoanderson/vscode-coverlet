@@ -1,9 +1,9 @@
 {
     "name": "vscode-coverlet",
-    "displayName": "Vscode Coverlet",
+    "displayName": "Coverlet",
     "description": "Coverlet tools for Vscode",
     "icon": "img/icon-512.png",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "urbanoanderson",
     "homepage": "https://github.com/urbanoanderson/vscode-coverlet/blob/master/README.md",
     "repository": {
