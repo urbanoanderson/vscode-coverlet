@@ -1,10 +1,10 @@
-[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version-short/urbanoanderson.vscode-coverlet.svg)](https://marketplace.visualstudio.com/items?itemName=urbanoanderson.vscode-coverlet) [![Downloads](https://vsmarketplacebadge.apphb.com/downloads-short/urbanoanderson.vscode-coverlet.svg)](https://marketplace.visualstudio.com/items?itemName=urbanoanderson.vscode-coverlet) [![Build Status](https://travis-ci.org/urbanoanderson/vscode-coverlet.svg?branch=master)](https://travis-ci.org/urbanoanderson/vscode-coverlet)
+[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version-short/urbanoanderson.vscode-coverlet.svg)](https://marketplace.visualstudio.com/items?itemName=urbanoanderson.vscode-coverlet) [![Downloads](https://vsmarketplacebadge.apphb.com/downloads-short/urbanoanderson.vscode-coverlet.svg)](https://marketplace.visualstudio.com/items?itemName=urbanoanderson.vscode-coverlet) [![Build Status](https://travis-ci.org/urbanoanderson/vscode-coverlet.svg?branch=master)](https://travis-ci.org/urbanoanderson/vscode-coverlet) [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/urbanoanderson/vscode-coverlet/blob/master/LICENSE.md)
 
 # Vscode-Coverlet
 
 ## About
 
-Edits coverlet report files to strip all the already tested code so you can focus on what needs to be tested.
+Extension for handling with [Coverlet](https://github.com/tonerdo/coverlet) reports on .NET projects. Edits report files to strip all the already tested code so you can focus on what needs to be tested.
 
 Icon made by Freepik and available at `www.flaticon.com/free-icon/test_115050`
 
