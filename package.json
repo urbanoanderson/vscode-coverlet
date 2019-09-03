@@ -38,12 +38,18 @@
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
         "lint": "tslint ./src/*.ts",
-        "watch": "tsc -watch -p ./"
+        "watch": "tsc -watch -p ./",
+        "test": "mocha -r ts-node/register src/tests/*.ts"
     },
     "devDependencies": {
+        "@types/chai": "^4.2.0",
+        "@types/mocha": "^5.2.7",
         "@types/node": "^6.0.40",
+        "@types/vscode": "^1.32.0",
+        "chai": "^4.2.0",
+        "mocha": "^6.2.0",
+        "ts-node": "^8.3.0",
         "tslint": "^5.16.0",
-        "typescript": "^3.5.1",
-        "@types/vscode": "^1.32.0"
+        "typescript": "^3.5.1"
     }
 }
