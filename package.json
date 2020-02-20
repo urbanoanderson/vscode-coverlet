@@ -3,7 +3,7 @@
     "displayName": "Coverlet",
     "description": "Coverlet tools for Vscode",
     "icon": "img/icon-512.png",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "publisher": "urbanoanderson",
     "homepage": "https://github.com/urbanoanderson/vscode-coverlet/blob/master/README.md",
     "repository": {
@@ -23,7 +23,8 @@
         "Report"
     ],
     "activationEvents": [
-        "onCommand:extension.coverletStrip"
+        "onCommand:extension.coverletStrip",
+        "onCommand:extension.coverletFilecheck"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -31,6 +32,10 @@
             {
                 "command": "extension.coverletStrip",
                 "title": "Coverlet Strip"
+            },
+            {
+                "command": "extension.coverletFilecheck",
+                "title": "Coverlet Filecheck"
             }
         ]
     },

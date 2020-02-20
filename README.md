@@ -4,19 +4,19 @@
 
 ## About
 
-Extension for handling with [Coverlet](https://github.com/tonerdo/coverlet) reports on .NET projects. Edits report files to strip all the already tested code so you can focus on what needs to be tested.
-
-Icon made by Freepik and available at `www.flaticon.com/free-icon/test_115050`
+Extension for handling [Coverlet](https://github.com/tonerdo/coverlet) reports on .NET projects. It edits report files to strip irrelevant code so you can focus on what needs to be tested.
 
 ## Preview
 
 ![Image](./img/preview.gif)
 
-## To Run
+## Usage
 
-- Open command menu on vscode with: `CTRL` + `SHIFT` + `P`
+- Open command menu on vscode with `CTRL`+`SHIFT`+`P` and run one of the following commands:
 
-- Run `Coverlet Strip` on an opened `coverlet.json` report file
+	- Run `Coverlet Strip` on an opened `coverlet.json` report file to strip it from everything that is already tested.
+
+	- Run `Coverlet Filecheck` on an opened C# class file to open a coverlet report with reports for only that class.
 
 ## Debugging the extension source
 
@@ -32,6 +32,10 @@ Icon made by Freepik and available at `www.flaticon.com/free-icon/test_115050`
 
 ## Release Notes
 
+### 1.1.0
+
+- Added `Filecheck` command
+
 ### 1.0.1
 
 - Fix bug that leaves null values while removing some branches
@@ -39,3 +43,7 @@ Icon made by Freepik and available at `www.flaticon.com/free-icon/test_115050`
 ### 1.0.0
 
 - Initial Version
+
+## Acknowledgements
+
+Icon made by Freepik and available at [Flaticon](www.flaticon.com/free-icon/test_115050)

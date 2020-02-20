@@ -1,4 +1,4 @@
-export function stripReport(reportStr: string) {
+export function stripAllTestedCode(reportStr: string) {
 
 	let report
 	try {
@@ -86,4 +86,8 @@ export function stripReport(reportStr: string) {
 	}
 
 	return report
+}
+
+export function stripAllButOneClass(reportStr: string, className: string) {
+	//TODO
 }
