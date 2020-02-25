@@ -1,64 +1,64 @@
 {
-    "App.dll": {
-        "C:\\Users\\aafu\\Downloads\\code\\urbanoanderson\\vscode-coverlet\\SampleApp\\App\\MyClass.cs": {
-            "App.MyClass": {
-                "System.String App.MyClass::ProduceWorld(System.String)": {
-                    "Lines": {
-                        "6": 1,
-                        "7": 1,
-                        "8": 1
-                    },
-                    "Branches": []
-                },
-                "System.Int32 App.MyClass::SumValues(System.Int32,System.Int32)": {
-                    "Lines": {
-                        "11": 1,
-                        "12": 1,
-                        "13": 1
-                    },
-                    "Branches": []
-                },
-                "System.Int32 App.MyClass::MaxInt(System.Int32,System.Int32)": {
-                    "Lines": {
-                        "16": 1,
-                        "17": 1,
-                        "18": 1,
-                        "20": 0,
-                        "21": 1
-                    },
-                    "Branches": [
-                        {
-                            "Line": 17,
-                            "Offset": 10,
-                            "EndOffset": 12,
-                            "Path": 0,
-                            "Ordinal": 0,
-                            "Hits": 1
-                        },
-                        {
-                            "Line": 17,
-                            "Offset": 10,
-                            "EndOffset": 16,
-                            "Path": 1,
-                            "Ordinal": 1,
-                            "Hits": 0
-                        }
-                    ]
-                }
-            }
+  "App.dll": {
+    "C:\\Users\\Anderson Urbano\\Downloads\\code\\vscode-coverlet\\sample-coverlet-app\\App\\MyClass.cs": {
+      "App.MyClass": {
+        "System.String App.MyClass::ProduceWorld(System.String)": {
+          "Lines": {
+            "6": 1,
+            "7": 1,
+            "8": 1
+          },
+          "Branches": []
         },
-        "C:\\Users\\aafu\\Downloads\\code\\urbanoanderson\\vscode-coverlet\\SampleApp\\App\\Program.cs": {
-            "App.Program": {
-                "System.Void App.Program::Main(System.String[])": {
-                    "Lines": {
-                        "8": 0,
-                        "9": 0,
-                        "10": 0,
-                        "11": 0
-                    },
-                    "Branches": []
-                }
+        "System.Int32 App.MyClass::SumValues(System.Int32,System.Int32)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 App.MyClass::MaxInt(System.Int32,System.Int32)": {
+          "Lines": {
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "20": 0,
+            "21": 1
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 10,
+              "EndOffset": 12,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 10,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
             }
+          ]
         }
+      }
+    },
+    "C:\\Users\\Anderson Urbano\\Downloads\\code\\vscode-coverlet\\sample-coverlet-app\\App\\Program.cs": {
+      "App.Program": {
+        "System.Void App.Program::Main(System.String[])": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
     }
+  }
 }

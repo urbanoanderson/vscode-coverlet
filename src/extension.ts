@@ -37,11 +37,41 @@ export function coverletStripHandler() {
 }
 
 export function coverletFilecheckHandler() {
+	// A project must be opened
+	if(vscode.workspace == undefined)
+		return;
 
+	//Get filename of the current file
+	let editor = vscode.window.activeTextEditor;
+
+	if(!editor)
+		return;
+
+	var classFilename = "";
+	classFilename = editor.document.fileName;
+
+	//Find a coverlet report file
 	vscode.workspace.findFiles('*/coverage.json', '**/node_modules/**', 1).then((uris) => {
-		console.log(uris[0].path);
 		uris.forEach((uri) => {
-			vscode.workspace.openTextDocument(uri).then(doc => vscode.window.showTextDocument(doc));
+			//Extract its text
+			var reportText = "";
+			vscode.workspace.openTextDocument(uri).then(doc =>{
+				reportText = doc.getText();
+			})
+			//Create a new file
+			.then(() => {
+				const wpFolders = vscode.workspace && vscode.workspace.workspaceFolders
+				const untitledUri = wpFolders && wpFolders[0].uri + '/filecheck.json';
+
+				vscode.workspace.openTextDocument(vscode.Uri.parse('untitled:'+ untitledUri)).then(doc => {
+					vscode.window.showTextDocument(doc).then(e => {
+						e.edit(edit => {
+							var newReportContent = strip.stripAllButOneFile(reportText, classFilename);
+							edit.insert(new vscode.Position(0, 0), JSON.stringify(newReportContent, null, 2));
+						});
+					});
+				});
+			});
 		});
 	});
 }

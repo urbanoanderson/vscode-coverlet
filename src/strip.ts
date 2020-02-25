@@ -1,3 +1,5 @@
+import * as path from 'path';
+
 export function stripAllTestedCode(reportStr: string) {
 
 	let report
@@ -88,6 +90,26 @@ export function stripAllTestedCode(reportStr: string) {
 	return report
 }
 
-export function stripAllButOneClass(reportStr: string, className: string) {
-	//TODO
+export function stripAllButOneFile(reportStr: string, classFilename: string) {
+	let report
+	try {
+		report = JSON.parse(reportStr);
+	} catch (e) {
+		return null
+	}
+
+	var classFilepath = path.parse(classFilename);
+
+	for(var dll in report) {
+		for(var srcFile in report[dll]) {
+
+			var srcFilepath = path.parse(srcFile);
+
+			if(srcFilepath.base != classFilepath.base && path.relative(srcFilepath.dir, classFilepath.dir) == "") {
+				delete report[dll][srcFile]
+			}
+		}
+	}
+
+	return report
 }
