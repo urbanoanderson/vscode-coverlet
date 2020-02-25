@@ -6,6 +6,7 @@ import * as strip from './strip';
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(vscode.commands.registerCommand('extension.coverletStrip', coverletStripHandler));
 	context.subscriptions.push(vscode.commands.registerCommand('extension.coverletFilecheck', coverletFilecheckHandler));
+	context.subscriptions.push(vscode.commands.registerCommand('extension.coverletFilecheckMenu', coverletFilecheckMenuHandler));
 }
 
 export function coverletStripHandler() {
@@ -41,15 +42,18 @@ export function coverletFilecheckHandler() {
 	if(vscode.workspace == undefined)
 		return;
 
-	//Get filename of the current file
-	let editor = vscode.window.activeTextEditor;
-
-	if(!editor)
+	// An editor must be opened
+	if(!vscode.window.activeTextEditor)
 		return;
 
-	var classFilename = "";
-	classFilename = editor.document.fileName;
+	filecheck(vscode.window.activeTextEditor.document.fileName);
+}
 
+export function coverletFilecheckMenuHandler(uri:vscode.Uri) {
+	filecheck(uri.fsPath);
+};
+
+export function filecheck(classFilename : string) {
 	//Find a coverlet report file
 	vscode.workspace.findFiles('*/coverage.json', '**/node_modules/**', 1).then((uris) => {
 		uris.forEach((uri) => {

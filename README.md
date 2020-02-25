@@ -16,7 +16,7 @@ Extension for handling [Coverlet](https://github.com/tonerdo/coverlet) reports o
 
 	- Run `Coverlet Strip` on an opened `coverlet.json` report file to strip it from everything that is already tested.
 
-	- Run `Coverlet Filecheck` on an opened C# class file to open a coverlet report with reports for only that file.
+	- Run `Coverlet Filecheck` on an opened C# class file to show the existing report contents regarding the file. Alternatively, you can right-click the file on vscode explorer and run the filecheck command. The result will show both tested and untested lines for the file.
 
 ## Debugging the extension source
 
@@ -30,15 +30,17 @@ Extension for handling [Coverlet](https://github.com/tonerdo/coverlet) reports o
 
 - A test instance of vscode loaded with the extension will appear
 
+- Extra: you can also run unit tests for the extension by executing `npm test` on terminal
+
 ## Release Notes
 
 ### 1.1.0
 
-- Added `Filecheck` command
+- Added Filecheck command
 
 ### 1.0.1
 
-- Fix bug that leaves null values while removing some branches
+- Fixed bug that leaved null values while removing some branches
 
 ### 1.0.0
 

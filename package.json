@@ -24,7 +24,8 @@
     ],
     "activationEvents": [
         "onCommand:extension.coverletStrip",
-        "onCommand:extension.coverletFilecheck"
+        "onCommand:extension.coverletFilecheck",
+        "onCommand:extension.coverletFilecheckMenu"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -36,8 +37,19 @@
             {
                 "command": "extension.coverletFilecheck",
                 "title": "Coverlet Filecheck"
+            },
+            {
+                "command": "extension.coverletFilecheckMenu",
+                "title": "Coverlet Filecheck"
             }
-        ]
+        ],
+        "menus": {
+            "explorer/context": [{
+                "when": "resourceLangId == csharp",
+                "command": "extension.coverletFilecheckMenu",
+                "group": "z_commands"
+          }]
+        }
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
