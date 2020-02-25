@@ -16,7 +16,7 @@ Extension for handling [Coverlet](https://github.com/tonerdo/coverlet) reports o
 
 	- Run `Coverlet Strip` on an opened `coverlet.json` report file to strip it from everything that is already tested.
 
-	- Run `Coverlet Filecheck` on an opened C# class file to open a coverlet report with reports for only that class.
+	- Run `Coverlet Filecheck` on an opened C# class file to open a coverlet report with reports for only that file.
 
 ## Debugging the extension source
 

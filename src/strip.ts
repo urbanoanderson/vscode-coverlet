@@ -105,7 +105,7 @@ export function stripAllButOneFile(reportStr: string, classFilename: string) {
 
 			var srcFilepath = path.parse(srcFile);
 
-			if(srcFilepath.base != classFilepath.base && path.relative(srcFilepath.dir, classFilepath.dir) == "") {
+			if(srcFilepath.base != classFilepath.base || path.relative(srcFilepath.dir, classFilepath.dir) != "") {
 				delete report[dll][srcFile]
 			}
 		}
