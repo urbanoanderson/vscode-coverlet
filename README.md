@@ -34,6 +34,11 @@ Extension for handling [Coverlet](https://github.com/tonerdo/coverlet) reports o
 
 ## Release Notes
 
+### 1.1.1
+
+- Fixed subfolder issue on Filecheck command
+- Added more errorchecks and messages
+
 ### 1.1.0
 
 - Added Filecheck command
