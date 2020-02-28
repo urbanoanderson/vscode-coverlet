@@ -38,13 +38,17 @@ export function coverletStripHandler() {
 }
 
 export function coverletFilecheckHandler() {
-	// A project must be opened
-	if(vscode.workspace == undefined)
-		return;
-
 	// An editor must be opened
-	if(!vscode.window.activeTextEditor)
+	if(!vscode.window.activeTextEditor) {
+		vscode.window.showErrorMessage("Error: no file is currently opened");
 		return;
+	}
+
+	// Current file is not a C# source file
+	if(vscode.window.activeTextEditor.document.languageId !== "csharp")	{
+		vscode.window.showErrorMessage("Error: current file is not a C# source code file");
+		return;
+	}
 
 	filecheck(vscode.window.activeTextEditor.document.fileName);
 }
@@ -55,27 +59,34 @@ export function coverletFilecheckMenuHandler(uri:vscode.Uri) {
 
 export function filecheck(classFilename : string) {
 	//Find a coverlet report file
-	vscode.workspace.findFiles('*/coverage.json', '**/node_modules/**', 1).then((uris) => {
-		uris.forEach((uri) => {
-			//Extract its text
-			var reportText = "";
-			vscode.workspace.openTextDocument(uri).then(doc =>{
-				reportText = doc.getText();
-			})
-			//Create a new file
-			.then(() => {
-				const wpFolders = vscode.workspace && vscode.workspace.workspaceFolders
-				const untitledUri = wpFolders && wpFolders[0].uri + '/filecheck.json';
-
-				vscode.workspace.openTextDocument(vscode.Uri.parse('untitled:'+ untitledUri)).then(doc => {
-					vscode.window.showTextDocument(doc).then(e => {
-						e.edit(edit => {
-							var newReportContent = strip.stripAllButOneFile(reportText, classFilename);
-							edit.insert(new vscode.Position(0, 0), JSON.stringify(newReportContent, null, 2));
+	vscode.workspace.findFiles('**/coverage.json', '**/node_modules/**', 1).then((uris) => {
+		if(uris.length === 0) {
+			vscode.window.showErrorMessage("Error: could not find a Coverlet 'coverage.json' report file on current workspace");
+		}
+		else {
+			uris.forEach((uri) => {
+				//Extract its text
+				let reportText = "";
+				vscode.workspace.openTextDocument(uri).then(doc =>{
+					reportText = doc.getText();
+				})
+				//Create an untitled striped report file
+				.then(() => {
+					vscode.workspace.openTextDocument({ language: 'json' }).then(doc => {
+						vscode.window.showTextDocument(doc).then(e => {
+							e.edit(edit => {
+								let newReportContent = strip.stripAllButOneFile(reportText, classFilename);
+								if (newReportContent === null){
+									vscode.window.showErrorMessage("Error: selected report file is invalid")
+								}
+								else {
+									edit.insert(new vscode.Position(0, 0), JSON.stringify(newReportContent, null, 2));
+								}
+							});
 						});
 					});
 				});
 			});
-		});
+		}
 	});
 }
