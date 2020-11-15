@@ -15,6 +15,24 @@
                 "kind": "build",
                 "isDefault": true
             }
-        }
+        },
+        {
+            "label": "clean-sample-app",
+            "command": "dotnet clean ${config:sampleAppProjFile}; dotnet clean ${config:sampleAppTestProjFile}",
+            "type": "shell",
+            "group": "none",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "test-sample-app",
+            "dependsOn": "clean-sample-app",
+            "command": "dotnet test /p:CollectCoverage=true ${config:sampleAppsolutionFile}",
+            "type": "shell",
+            "group": "test",
+            "problemMatcher": "$msCompile"
+        },
     ]
 }

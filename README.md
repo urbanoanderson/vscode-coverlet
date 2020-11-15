@@ -34,10 +34,15 @@ Extension for handling [Coverlet](https://github.com/tonerdo/coverlet) reports o
 
 ## Release Notes
 
+### 1.1.2
+
+- Fixed npm dependencies vulnerabilities
+- Update sample app project to .NET Core 3.1
+
 ### 1.1.1
 
 - Fixed subfolder issue on Filecheck command
-- Added more errorchecks and messages
+- Added more error checks and messages
 
 ### 1.1.0
 
