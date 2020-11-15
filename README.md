@@ -1,4 +1,4 @@
-[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version-short/urbanoanderson.vscode-coverlet.svg)](https://marketplace.visualstudio.com/items?itemName=urbanoanderson.vscode-coverlet) [![Downloads](https://vsmarketplacebadge.apphb.com/downloads-short/urbanoanderson.vscode-coverlet.svg)](https://marketplace.visualstudio.com/items?itemName=urbanoanderson.vscode-coverlet) [![Build Status](https://travis-ci.org/urbanoanderson/vscode-coverlet.svg?branch=master)](https://travis-ci.org/urbanoanderson/vscode-coverlet) [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/urbanoanderson/vscode-coverlet/blob/master/LICENSE.md)
+[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version-short/urbanoanderson.vscode-coverlet.svg)](https://marketplace.visualstudio.com/items?itemName=urbanoanderson.vscode-coverlet) [![Downloads](https://vsmarketplacebadge.apphb.com/downloads-short/urbanoanderson.vscode-coverlet.svg)](https://marketplace.visualstudio.com/items?itemName=urbanoanderson.vscode-coverlet) [![Build Status](https://travis-ci.com/urbanoanderson/vscode-coverlet.svg?branch=master)](https://travis-ci.com/urbanoanderson/vscode-coverlet) [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/urbanoanderson/vscode-coverlet/blob/master/LICENSE.md)
 
 # Vscode-Coverlet
 
@@ -38,6 +38,7 @@ Extension for handling [Coverlet](https://github.com/tonerdo/coverlet) reports o
 
 - Fixed npm dependencies vulnerabilities
 - Update sample app project to .NET Core 3.1
+- Migrate from `travis-ci.org` to `travis-ci.com`
 
 ### 1.1.1
 
