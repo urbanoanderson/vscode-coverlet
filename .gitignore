@@ -7,4 +7,3 @@ out/
 sample-coverlet-app/*/bin/
 sample-coverlet-app/*/obj/
 *.vsix
-package-lock.json
