@@ -1,5 +1,9 @@
 # Change Log
 
+### 1.1.4
+
+- Fixed new security vulnerabilities on dependencies
+
 ### 1.1.3
 
 - Fixed new security vulnerabilities on dependencies
