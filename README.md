@@ -34,11 +34,9 @@ Extension for handling [Coverlet](https://github.com/tonerdo/coverlet) reports o
 
 ## Release Notes ([Change Log](CHANGELOG.md))
 
-### 1.1.3
+### 1.1.4
 
 - Fixed new security vulnerabilities on dependencies
-- Updated sample app project to .NET 5
-- Created Changelog file
 
 ## Acknowledgements
 
