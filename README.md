@@ -34,9 +34,9 @@ Extension for handling [Coverlet](https://github.com/tonerdo/coverlet) reports o
 
 ## Release Notes ([Change Log](CHANGELOG.md))
 
-### 1.1.4
+### 1.1.5
 
-- Fixed new security vulnerabilities on dependencies
+- Bump dependencies to fix new security vulnerabilities
 
 ## Acknowledgements
 
