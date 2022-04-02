@@ -1,5 +1,9 @@
 # Change Log
 
+### 1.1.5
+
+- Bump dependencies to fix new security vulnerabilities
+
 ### 1.1.4
 
 - Fixed new security vulnerabilities on dependencies
